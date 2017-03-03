@@ -1,0 +1,32 @@
+{
+  "name": "mini_project",
+  "version": "1.0.0",
+  "description": "Mini Project",
+  "main": "app.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "*",
+    "cookie-parser": "*",
+    "ejs": "*",
+    "express": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "jquery": "*",
+    "materialize-css": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "mongoose-unique-validator": "^1.0.4",
+    "multer": "*",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*"
+  }
+}

@@ -1,0 +1,39 @@
+<% include partials/homepage/header %>
+
+  <form class="centered-form" method="POST" action="/upload" enctype = "multipart/form-data">
+    <div class="file-field input-field">
+      <div class="btn">
+        <span>Upload Image</span>
+        <input type="file" name="apartment_image">
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text">
+      </div>
+    </div>
+    <div class="input-field col s6">
+      <input placeholder="Address" id="address" name="address" type="text" class="validate">
+      <label for="address">Address</label>
+    </div>
+    <div class="input-field col s6">
+      <input placeholder="District" id="district" name="district" type="text" class="validate">
+      <label for="district">District</label>
+    </div>
+    <div class="input-field col s6">
+      <input placeholder="Size" id="size" name="size" type="number" class="validate">
+      <label for="address">Size</label>
+    </div> 
+    <div class="input-field col s6">
+      <input placeholder="Rent" id="rent" name="rent" type="number" class="validate">
+      <label for="address">Rent</label>
+    </div> 
+    <div class="input-field col s6">
+      <input placeholder="Amenities" id="amenities" name="amenities" type="text" class="validate">
+      <label for="address">Amenities</label>
+    </div>                
+    <button class="btn btn-centered waves-effect waves-light" type="submit" name="action">
+      Submit
+      <i class="material-icons right">send</i>
+    </button>
+  </form>
+
+<% include partials/homepage/footer %>

@@ -1,0 +1,54 @@
+<% include partials/user/h %>
+    <% include partials/user/Bh %>
+        <form method="post" action="/users/register">
+            <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" name="first_name" id="first_name">
+                <label class="mdl-textfield__label" for="first_name">First Name</label>
+            </div>
+            <br/>
+            <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" name="last_name" id="last_name">
+                <label class="mdl-textfield__label" for="last_name">Last Name</label>
+            </div>
+            <div>
+            <br/>
+            <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="email" name="email" id="email">
+                <label class="mdl-textfield__label" for="email">Email</label>
+            </div>
+            <div>
+            <br/>
+            <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="date" name="birthdate" id="birthdate">
+            </div>
+            <div>
+            <br/> Gender:
+            <label for="gender-male" class="mdl-radio mdl-js-radio">
+                <input type="radio" id="gender-male" name="gender" value="male" class="mdl-radio__button">
+                <span class="mdl-radio__label">Male</span>
+            </label>
+            <label for="gender-female" class="mdl-radio mdl-js-radio">
+                <input type="radio" id="gender-female" name="gender" value="female" class="mdl-radio__button">
+                <span class="mdl-radio__label">Female</span>
+            </label>
+            </md-divider>
+            <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" name="username" id="username">
+                <label class="mdl-textfield__label" for="username">Username</label>
+            </div>
+            <br/>
+            <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="password" name="password" id="password">
+                <label class="mdl-textfield__label" for="password">Password</label>
+            </div>
+            <br/>
+            <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="password" name="password2" id="password2">
+                <label class="mdl-textfield__label" for="password2">Verify Password</label>
+            </div>
+            <div>
+                <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--primary">Register</button>
+            </div>
+        </form>
+    <% include partials/user/Bf %>
+<% include partials/user/f %>

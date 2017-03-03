@@ -1,0 +1,49 @@
+body{    
+  background-image: url("/bg.png");
+  background-color: ff5722;
+}
+.login-box{
+  max-width: 900px;
+  padding: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+            text-align:center;
+
+}
+.login-form {
+    display: inline-block; 
+  background-color: white;
+  padding-left: 20;
+  padding-top: 10;
+  padding-right: 20;
+}
+.logo-heading{
+  font-family: 'Damion';
+  color: white;
+  font-size: 72px;
+}
+
+.outer {
+      text-align: center;
+
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto; 
+}

@@ -1,0 +1,25 @@
+.centered-form {
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 46%;
+}
+
+.btn.btn-centered {
+    position: relative;
+    margin: 0 auto;
+    display: block;
+}
+
+.extra-margin {
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0;
+    white-space: nowrap;
+    top: 15px;
+}

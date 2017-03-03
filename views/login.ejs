@@ -1,0 +1,18 @@
+<% include partials/user/h %>
+  <% include partials/user/Bh %>
+      <form method="post" action="/users/login">
+        <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="text" name="username" id="username">
+          <label class="mdl-textfield__label" for="username">Username</label>
+        </div>
+        <br/>
+        <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="password" name="password" id="password">
+          <label class="mdl-textfield__label" for="password">Password</label>
+        </div>
+        <div>
+          <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--primary">Login</button>
+        </div>
+      </form>
+  <% include partials/user/Bf %>
+<% include partials/user/f %>
