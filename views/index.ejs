@@ -1,21 +1,34 @@
 <% include partials/homepage/header %>
 
-  <div class="row">
-    <% for(var i=0; i<apartments.length; i++){ %>
-      <div class="col s4">
-        <div class="card medium">
-          <div class="card-image">
-            <img src= <%= apartments[i].photo_path %>>
-            <span class="card-title"><%= apartments[i].address %></span>
-          </div>
-          <div class="card-content">
-          </div>
-          <div class="card-action">
-            <a href="#">View more details</a>
+  <br/>
+  <div class="container">
+    <br/>
+    <div class="white">
+      <form method="post" action="/">
+        <div class="input-field">
+          <input placeholder="search by district" id="search" type="search" name="search" required>
+          <label class="label-icon prefix" for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
+    </div>
+    <div class="row">
+      <% for(var i=0; i<apartments.length; i++){ %>
+        <div class="col s4">
+          <div class="card medium">
+            <div class="card-image">
+              <img src= <%=apartments[i].photo_path %> >
+              <span class="card-title"><%= apartments[i].address %></span>
+            </div>
+            <div class="card-content">
+              <%= apartments[i].district %>
+            </div>
+            <div class="card-action">
+              <a href="#">View more details</a>
+            </div>
           </div>
         </div>
-      </div>
-     <% } %> 
-  </div>
+        <% } %>
+    </div>
 
-<% include partials/homepage/footer %>
+    <% include partials/homepage/footer %>

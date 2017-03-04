@@ -9,7 +9,7 @@ var storage = multer.diskStorage({
     cb(null, 'public/uploads/')
   },
   filename: function (req, file, cb) {
-    cb(null, file.originalname)
+    cb(null,  escape(file.originalname))
   }
 });
 
@@ -18,6 +18,8 @@ var upload = multer({ storage: storage });
 
 // add routes
 router.get('/', apartmentController.getAllApartments);
+router.post('/', apartmentController.getSomeApartments);
+
 
 router.post('/upload', upload.single('apartment_image'), apartmentController.createApartment);
 
