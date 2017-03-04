@@ -21,7 +21,7 @@ router.get('/', apartmentController.getAllApartments);
 
 router.post('/upload', upload.single('apartment_image'), apartmentController.createApartment);
 
-router.get('/upload.ejs', function (req, res) {
+router.get('/upload', function (req, res) {
    res.render('upload');
 });
 

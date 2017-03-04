@@ -17,9 +17,14 @@
     <div class="nav-wrapper deep-orange darken-1">
       <a href="../" class="extra-margin"><img src="/dormee.png" /></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="../upload.ejs">Upload</a></li>
+        <% if (isUser) { %>
+        <li><a href="../upload">Upload</a></li>
+        <li><a href="../users/logout">logout</a></li>
+        <% } %>
+        <% if (!isUser) { %>
         <li><a href="/users/register">Register</a></li>
-        <li><a href="/users/login">Login</a></li>
+        <li><a href="/users/login">Login</a></li>        
+        <% } %>
       </ul>
     </div>
   </nav>  
