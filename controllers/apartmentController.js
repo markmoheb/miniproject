@@ -29,7 +29,7 @@ let apartmentController = {
         req.checkBody('address', 'Address required').notEmpty();
         req.checkBody('district', 'District required').notEmpty();
         req.checkBody('size', 'Size required').notEmpty();
-        req.checkBody('apartment_image', 'Photo required').notEmpty();
+        // req.checkBody('apartment_image', 'Photo required').notEmpty();
         req.checkBody('rent', 'Rent required').notEmpty();
 
         var errors = req.validationErrors();

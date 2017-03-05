@@ -8,9 +8,9 @@ var storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'public/uploads/')
   },
-  filename: function (req, file, cb) {
-    cb(null,  escape(file.originalname))
-  }
+  // filename: function (req, file, cb) {
+  //   cb(null,  escape(file.originalname))
+  // }
 });
 
 var upload = multer({ storage: storage });
