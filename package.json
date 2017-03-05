@@ -13,20 +13,31 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+
     "body-parser": "*",
     "cookie-parser": "*",
+
     "ejs": "*",
+
     "express": "*",
     "express-session": "*",
     "express-validator": "*",
+
     "jquery": "*",
+
     "materialize-css": "*",
+
     "mongodb": "*",
     "mongoose": "*",
     "mongoose-unique-validator": "^1.0.4",
+
     "multer": "*",
+
     "passport": "*",
     "passport-http": "*",
-    "passport-local": "*"
+    "passport-local": "*",
+
+    "bcrypt": "*",
+    "connect-flash": "*" 
   }
 }
