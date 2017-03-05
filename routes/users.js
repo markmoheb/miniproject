@@ -64,6 +64,7 @@ router.post('/register', function(req, res){
 	 
  
 	 if(errors){
+		 req.flash('error',errors[0].msg)
         res.redirect('/users/register');
 	 	console.log(errors);
 
@@ -83,12 +84,15 @@ router.post('/register', function(req, res){
  
 	 	User.createUser(newUser , function(err, user){
 	 		if(err) throw err;
+
 	 		console.log(user);
 	 	});
  
-	 	req.flash('success_msg', 'you are registered and can now log in');
-        res.redirect('/');
-	 }
+		req.flash('error', 'you are registered and can now log in');
+	     
+        res.redirect('/users/login');
+    
+	}
  
  
 });
