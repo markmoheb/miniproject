@@ -7,7 +7,7 @@ var config = require('../config/database');
 var UserSchema = mongoose.Schema({
 	username: {
 		type: String,
-		index: true
+		index: { unique: true }
 	},
 	password: {
 		type: String
@@ -19,7 +19,8 @@ var UserSchema = mongoose.Schema({
         type: String
     },
 	email: {
-		type: String
+		type: String,		
+		index: {unique:true}
 	},
 	birthdate: {
         type: Date
@@ -52,7 +53,9 @@ module.exports.createUser = (newUser, callback) => {
         bcrypt.hash(newUser.password, salt, function(err, hash) {
             // Store hash in your password DB. 
             newUser.password = hash;
-            newUser.save(callback);
+            newUser.save(callback, (err)=>{
+				if(err)  req.flash('error',err)
+			});
      
         });
     });
