@@ -120,7 +120,7 @@ router.get('/profile', (req, res, next) => {
 router.get('/logout', (req, res) => {
 	req.logout();
 	req.flash('success_msg', 'You have been successfuly logged out');
-	res.redirect('/users/login');
+	res.redirect('/');
 });
 
 module.exports = router;
