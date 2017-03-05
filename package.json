@@ -37,7 +37,7 @@
     "passport-http": "*",
     "passport-local": "*",
 
-    "bcrypt": "*",
+    "bcryptjs": "*",
     "connect-flash": "*" 
   }
 }

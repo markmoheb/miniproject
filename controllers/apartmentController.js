@@ -33,7 +33,9 @@ let apartmentController = {
         req.checkBody('rent', 'Rent required').notEmpty();
 
         var errors = req.validationErrors();
+
         if (errors) {
+            req.flash('error', errors[0].msg)
             res.redirect('/upload');
             console.log(errors);
         }

@@ -67,7 +67,6 @@ router.post('/register', function(req, res){
 		 req.flash('error',errors[0].msg)
         res.redirect('/users/register');
 	 	console.log(errors);
-
 	 }else{
 	 	var newUser = new User({
 	 		first_name: first_name,
