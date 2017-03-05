@@ -52,6 +52,7 @@ let apartmentController = {
                 }
                 else {
                     console.log(apartment);
+                    req.flash('success_msg', 'Apartment successfully uploaded');
                     res.redirect('/');
                 }
             })

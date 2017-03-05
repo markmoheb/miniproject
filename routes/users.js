@@ -101,8 +101,9 @@ router.get('/login', (req, res, next) => {
 });
 
 router.post('/login',
-  passport.authenticate('local', {successRedirect:'/', failureRedirect:'/users/login',failureFlash: true}),
+  passport.authenticate('local', {/* successRedirect:'/',*/ failureRedirect:'/users/login',failureFlash: true}),
   (req, res) => {
+		req.flash('success_msg','You have been successfuly logged in')
     res.redirect('/');
   });
 
@@ -113,7 +114,7 @@ router.get('/profile', (req, res, next) => {
 
 router.get('/logout', (req, res) => {
   req.logout();
-  req.flash('success_msg', 'You are logged out');
+  req.flash('success_msg', 'You have been successfuly logged out');
   res.redirect('/users/login');
 });
 
