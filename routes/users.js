@@ -84,11 +84,10 @@ router.post('/register', function(req, res){
  
 	 	User.createUser(newUser , function(err, user){
 	 		if(err) throw err;
-
 	 		console.log(user);
 	 	});
  
-		req.flash('error', 'you are registered and can now log in');
+		req.flash('success_msg', 'you are registered and can now log in');
 	     
         res.redirect('/users/login');
     
@@ -116,7 +115,7 @@ router.get('/profile', (req, res, next) => {
 router.get('/logout', (req, res) => {
   req.logout();
   req.flash('success_msg', 'You are logged out');
-  res.redirect('/');
+  res.redirect('/users/login');
 });
 
 module.exports = router;

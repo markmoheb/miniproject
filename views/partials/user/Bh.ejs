@@ -4,5 +4,13 @@
         <% if (error != '') { %>
                     <div class="alert alert-danger"><%= error %></div>
         <% } %>
-            <h3 class="logo-heading">Dormee</h3><br/><br/>
+        <% if (error_msg != '') { %>
+                    <div class="alert alert-danger"><%= error_msg %></div>
+        <% } %>
+        <% if (success_msg != '') { %>
+                    <div class="alert alert-success"><%= success_msg %></div>
+        <% } %>
+            <h3 class="logo-heading"><a class="logo-heading" href="/">Dormee</a></h3><br/><br/>
+                  
+
             <div class="login-form mdl-card mdl-shadow--2dp">
