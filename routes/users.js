@@ -51,6 +51,8 @@ router.post('/register', function (req, res) {
 	req.checkBody('password', 'Password required').notEmpty();
 	req.checkBody('password2', 'Password required').notEmpty();
 	req.checkBody('password2', 'Passwords do not match').equals(req.body.password);
+	// req.checkBody('email', 'Not unique');
+	// req.checkBody('username', 'not unique username');
 
 	var errors = req.validationErrors();
 
@@ -78,9 +80,6 @@ router.post('/register', function (req, res) {
 			gender: gender
 		});
 
-		console.log('FORM SUBMITTED');
-		console.log(email);
-
 		User.createUser(newUser, function (err, user) {
 			if (err) {
 				console.log(err)
@@ -96,11 +95,6 @@ router.post('/register', function (req, res) {
 				console.log(user);
 			}
 		});
-
-		req.flash('success_msg', 'you are registered and can now log in');
-
-		res.redirect('/users/login');
-
 	}
 
 

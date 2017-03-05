@@ -8,7 +8,6 @@
         <div class="input-field">
           <input placeholder="search by district" id="search" type="search" name="search" required>
           <label class="label-icon prefix" for="search"><i class="material-icons">search</i></label>
-          <i class="material-icons">close</i>
         </div>
       </form>
     </div>
@@ -17,10 +16,11 @@
         <div class="col s4">
           <div class="card medium">
             <div class="card-image">
-              <img src= <%= apartments[i].photo_path %> >
+              <img src=< %= apartments[i].photo_path %> >
               <span class="card-title" style="text-shadow: 0px 0px 4px black;"><%= apartments[i].address %></span>
             </div>
             <div class="card-content">
+              <i class="material-icons">location_on</i>
               <%= apartments[i].district %>
             </div>
             <div class="card-action">
