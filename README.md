@@ -6,3 +6,5 @@ Tasks:{
 	-register page (Mariem Kandil & Mariem Aboushawareb)
 	-homepage (Salma El Ansary & Nada Hammad)
 }
+
+The deployed version is live @ 52.35.74.91:3000
